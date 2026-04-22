@@ -29,5 +29,4 @@ public class MainActivity extends AppCompatActivity {
         //リスナーを登録
         b.setOnClickListener(buttonActivity);
     }
-
 }
