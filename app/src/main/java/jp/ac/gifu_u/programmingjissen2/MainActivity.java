@@ -1,6 +1,8 @@
 package jp.ac.gifu_u.programmingjissen2;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //ボタンのイベントを受信するクラスをインスタンス化
+        ButtonActivity buttonActivity = new ButtonActivity(this);
+        //リソースから、buttonというIdのものを持って来てButtonクラスにキャスト
+        Button b = (Button)findViewById(R.id.button);
+        //リスナーを登録
+        b.setOnClickListener(buttonActivity);
     }
+
 }
